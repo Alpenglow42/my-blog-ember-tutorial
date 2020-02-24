@@ -1,0 +1,16 @@
+
+
+<h3>{{@post.title}}</h3>
+
+{{#if @showBody}}
+  <span>{{@post.publishedAt}}</span>
+  <pre style="white-space: pre-wrap;">{{@post.body}}</pre>
+{{/if}}
+
+
+
+
+{{yield}}
+
+
+
