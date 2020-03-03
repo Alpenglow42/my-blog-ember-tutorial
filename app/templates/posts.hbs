@@ -1,10 +1,11 @@
 
 <Input @value={{this.newTitle}} @enter={{action this.addPost}} />
 
+<PostView @post={{@model}} @showBody={{true}} />
+
 <ul>
   {{#each @model as |post|}}
     <li>
-      <!--{{post.title}}--> <!--when I delted this and added next line I get repeated post of application.hbs page-->
       <LinkTo @route="posts.post" @model={{post.id}}>
         <PostView @post={{post}} @showBody={{false}} />
       </LinkTo>
@@ -12,4 +13,10 @@
   {{/each}}
 </ul>
 
+
 {{outlet}}
+
+{{!--{{#each @model as |post|}}
+  {{post.id}}
+{{/each}}--}} <!-- shows the post id existing ot nor-->
+
